@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./bootstrap.css">
+
+    <title>Hello, world!</title>
+    <style>
+        .dropdown {
+            position: relative;
+            /* display: inline-block; */
+        }
+
+        .dropdown-content {
+
+            display: none;
+            position: relative;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px lightseagreen;
+
+        }
+
+        .list-group-item {
+            /* background-color: grey; */
+            margin-bottom: 10px;
+        }
+
+        #list-tab {
+            background-color: lightgray;
+
+        }
+
+        button {
+            background-color: grey;
+            margin-bottom: 15px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            position: relative;
+            display: block;
+            padding: 0.75rem 1.25rem;
+            margin-bottom: -1px;
+            /* background-color: #fff; */
+            border: 1px solid rgba(0, 0, 0, 0.125);
+        }
+
+        .dropdown-content a:hover :focus {
+            background-color: pink;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .list-group-item { word-wrap: break-word; }
+
+        #main {
+
+            /* display: -webkit-flex;
+            /* Safari */
+            /* -webkit-align-items: flex-start; */
+            /* Safari 7.0+ */
+
+            position: relative;
+
+
+            width: 81rem;
+            margin-top: 9px;
+            margin-bottom: -22px;
+            margin-left: -112px;
+            padding: 0px 0px 0px 0px;
+            /* border: 5px solid lightgray; */
+            max-height: -webkit-fill-available;
+            overflow: auto;
+            height: 33.5rem;
+        }
+
+        body {
+  font-family: "Lato", sans-serif;
+}
+
+span{
+    font-size: 30px;
+    cursor: pointer;
+    float: right;
+    margin-top: 6rem;
+    margin-right: 17rem;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-right: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+    </style>
+</head>
+
+<body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md text-center">
+                    <h1>About the HIV QUALITY OF CARE Program</h1>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+    <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Clients</a>
+                <a href="#">Contact</a>
+              </div>
+
+
+              <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+
+
+    <div class="media">
+        <img src="./download.jpg" class="mr-3" alt="media image">
+        <div class="media-body">
+            <h1 class="ml-1">ABOUT THE HIV QUALITY OF CARE PROGRAM</h1>
+        </div>
+    </div>
+    </br>
+
+    <div class="row">
+        <div class="col-4" style="font-weight:bold; ">
+            <div class="list-group my-2" id="list-tab" role="tablist" style="width: fit-content">
+                <a class="list-group-item list-group-item-action disabled" id="content" data-toggle="list" href="" role="tab"
+                    aria-controls="content" style="background-color: grey; color: white;" disabled>
+                    <h3>Contents ></h3>
+                </a>
+                <a class="list-group-item list-group-item-action active" id="list-intro-list" data-toggle="list" href="#list-intro"
+                    role="tab" aria-controls="intro">Introduction</a>
+                <a class="list-group-item list-group-item-action" id="list-mnv-list" data-toggle="list" href="#list-mnv"
+                    role="tab" aria-controls="mnv">AIDS Institute Mission and Vision</a>
+                <a class="list-group-item list-group-item-action" id="list-po-list" data-toggle="list" href="#list-po"
+                    role="tab" aria-controls="po">HIV Quality of Care Program Overview</a>
+                <div class="dropdown">
+                    <button class="list-group-item list-group-item-action  dropdown-toggle" id="list-ps-list"
+                        data-toggle="list" href="#list-ps" role="tab" aria-controls="#list-ps">New York State Quality
+                        of Care(QOC) Program
+                        Standards </button>
+                        <div class="dropdown-content">
+                            <a href="#">Letter from medical director</a>
+                            <a href="#">Quality indicators by STI</a>
+                            <a href="#">Quality indicators by Patient group</a>
+                            <a href="#">STI Committee member</a>
+                        </div>
+
+                </div>
+
+
+                <a class="list-group-item list-group-item-action" id="list-oa-list" data-toggle="list" href="#list-oa"
+                    role="tab" aria-controls="oa">Organizational Assesments</a>
+                <a class="list-group-item list-group-item-action" id="list-pc-list" data-toggle="list" href="#list-pc"
+                    role="tab" aria-controls="pc">QOC Program Components</a>
+                <a class="list-group-item list-group-item-action" id="list-qi-list" data-toggle="list" href="#list-qi"
+                    role="tab" aria-controls="qi">Quality Improvment</a>
+                <a class="list-group-item list-group-item-action" id="list-review-list" data-toggle="list" href="#list-review"
+                    role="tab" aria-controls="review">2016 NYS HIV Quality of Care Review</a>
+
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+
+                        <a href="./container.html" class="btn btn-info" role="button">nextpage</a>
+
+                    <div class="tab-pane fade show active" id="list-intro" role="tabpanel" aria-labelledby="list-intro-list">
+                        <!-- <div class="container">
+
+                        </div> -->
+                        aaaa For simpler styling, clear hierarchy, and better spacing, description lists have
+                        updated
+                        For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        For simpler styling, clear hierarchy, and better spacing, description lists have updated
+
+
+                    </div>
+                    <div class="tab-pane fade" id="list-mnv" role="tabpanel" aria-labelledby="list-mnv-list">
+                        <p>
+                            bbbbFor simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-po" role="tabpanel" aria-labelledby="list-po-list">
+                        <p>
+                            ccccc For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-ps" role="tabpanel" aria-labelledby="list-ps-list">
+
+                        <p>
+                            dddd For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-oa" role="tabpanel" aria-labelledby="list-oa-list">
+                        <p>
+                            eeee For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-pc" role="tabpanel" aria-labelledby="list-pc-list">
+                        <p>
+                            ffff For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+
+                    </div>
+                    <div class="tab-pane fade" id="list-qi" role="tabpanel" aria-labelledby="list-qi-list">
+                        <p>
+                            gggg For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+                    </div>
+                    <div class="tab-pane fade" id="list-review" role="tabpanel" aria-labelledby="list-review-list">
+                        <p>
+                            hhhh For simpler styling, clear hierarchy, and better spacing, description lists have
+                            updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                            For simpler styling, clear hierarchy, and better spacing, description lists have updated
+                        </p>
+                    </div>
+                    <!-- <div class="tab-pane fade" id="list-stigma" role="tabpanel" aria-labelledby="list-stigma-list">...</div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+            function openNav() {
+              document.getElementById("mySidenav").style.width = "250px";
+            }
+
+            function closeNav() {
+              document.getElementById("mySidenav").style.width = "0";
+            }
+            </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
